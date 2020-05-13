@@ -12,4 +12,4 @@ nodeGroups:
     desiredCapacity: 3
     privateNetworking: true
  
- 
+ #eksctl create nodegroup --config-file=eks-cluster-worker-node.yaml
