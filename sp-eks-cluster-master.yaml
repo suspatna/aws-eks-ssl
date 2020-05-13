@@ -18,4 +18,4 @@ vpc:
       <zone1-c>:
         id: "<subnet-id>"
 
-  
+  #create cluster -f sp-eks-cluster-master.yaml --write-kubeconfig --set-kubeconfig-context
