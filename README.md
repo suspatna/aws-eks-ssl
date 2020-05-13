@@ -7,4 +7,4 @@ here is the command to execute:
 eksctl create cluster -f sp-eks-cluster.yaml --write-kubeconfig --set-kubeconfig-context
 
 
-eksctl delete cluster --name=<cluster-name>
+eksctl delete cluster --name= <cluster-name>
