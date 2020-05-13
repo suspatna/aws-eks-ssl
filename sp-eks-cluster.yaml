@@ -1,0 +1,25 @@
+# A simple example of ClusterConfig object with two nodegroups:
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster-1
+  region: <regioncode>
+
+vpc:
+  id: "<vpc-id>"  # (optional, must match VPC ID used for each subnet below)
+  subnets:
+    private:
+      <zone1-a>:
+        id: "<subnet-id>"
+      <zone1-b>:
+        id: "subnet-id"
+      <zone1-c>:
+        id: "<subnet-id>"
+
+nodeGroups:
+  - name: <node-name>
+    instanceType: <t2.micro>
+    desiredCapacity: 2
+  
