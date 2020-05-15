@@ -1,0 +1,16 @@
+aws cloudformation create-stack \
+--template-body file://single-instance.yml \
+--stack-name <name-of-you-ec2> \
+--parameters \
+ ParameterKey=KeyName,ParameterValue=test-ec2-1 \
+ ParameterKey=SSHLocation,ParameterValue=0.0.0.0/0\
+ ParameterKey=InstanceType,ParameterValue=t2.micro
+ 
+
+
+aws cloudformation estimate-template-cost \
+    --template-body file://single-instance.yml \
+    --parameters \
+    ParameterKey=KeyName,ParameterValue=test-ec2-1 \
+    ParameterKey=SSHLocation,ParameterValue=0.0.0.0/0\
+    ParameterKey=InstanceType,ParameterValue=t2.micro
